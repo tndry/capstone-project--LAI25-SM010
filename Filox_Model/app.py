@@ -18,7 +18,10 @@ st.set_page_config(
 
 # --- Path ke Folder Model ---
 # Pastikan folder ini berada di direktori yang sama dengan app.py
-MODEL_DIR = "./hoax_classifier_final"
+
+current_file_path = os.path.abspath(__file__)
+current_directory = os.path.dirname(current_file_path)
+MODEL_DIR = os.path.join(current_directory, 'hoax_classifier_final')
 
 # ==============================================================================
 # FUNGSI-FUNGSI UTAMA (Dengan Caching)
